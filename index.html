@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="floating-nav">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Personal Info</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="container">
+      <!-- Hero Section -->
+      <section class="hero-card">
+        <div class="profile-header">
+          <div class="avatar-frame">
+            <img
+              width="200px"
+              height="200px"
+              src="./ashish_image.jpg"
+              alt="Your Name"
+            />
+          </div>
+          <div class="title-box">
+            <h1>Ashish Biradar</h1>
+            <p class="tagline">Web Developer</p>
+          </div>
+        </div>
+        <div class="hero-bg"></div>
+      </section>
+
+      <!-- About Section -->
+      <section id="about" class="content-card">
+        <h2>
+          <!-- <i class="fas fa-sparkle"></i>   -->
+          Contact Info
+        </h2>
+        <p class="animated-text">
+          <strong>Email: </strong>ashishbiradar.1911@gmail.com <br /><strong
+            >Phone: </strong
+          >9552032489 <br /><strong>Address: </strong>Alandi,wadgaon
+          road,pune-412105
+        </p>
+      </section>
+
+      <!-- Experience Timeline -->
+      <section id="experience" class="content-card timeline">
+        <h2><i class="fas fa-rocket"></i> Skills</h2>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <p>
+            <strong>Skill 1: </strong>Web development <br /><strong
+              >Skill 2: </strong
+            >C language <br /><strong>Skill 3: </strong>Python Language
+            <br /><strong>Skill 4: </strong>Linux Operating System
+          </p>
+        </div>
+      </section>
+
+      <!-- Skills Grid -->
+      <section id="skills" class="content-card skills-grid">
+        <h2><i class="fas fa-magic"></i> Personal Information</h2>
+        <div class="skill" data-percent="90">
+          <span
+            ><strong>Date of Birth: </strong>19/11/2006 <br /><strong
+              >Gender: </strong
+            >Male <br /><strong>Language Known: </strong>Marathi,English,Hindi
+            <br /><strong>Educational Qualification: </strong>B.tech from Mit
+            Aoe
+          </span>
+          <div class="skill-bar"></div>
+        </div>
+      </section>
+
+      <!-- Contact Panel -->
+      <section id="contact" class="content-card contact-panel">
+        <h2><i class="fas fa-paper-plane"></i> Contact Me</h2>
+        <div class="contact-methods">
+          <a href="#" class="contact-btn email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="#" class="contact-btn phone">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+        <!-- Contact Form -->
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required />
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required />
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+      </section>
+    </div>
+  </body>
+</html>
