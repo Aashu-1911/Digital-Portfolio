@@ -4,12 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactive Portfolio</title>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav class="floating-nav">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
+      <a href="#about">Contact Info</a>
+      <a href="#experience">Skills</a>
       <a href="#skills">Personal Info</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -30,21 +32,27 @@
             <h1>Ashish Biradar</h1>
             <p class="tagline">Web Developer</p>
           </div>
+          <!-- Social Links Added Here -->
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/ashish-biradar-8390b6354/" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin fa-2x"></i>
+            </a>
+            <a href="mailto:ashishbiradar.1911@gmail.com">
+              <i class="fas fa-envelope fa-2x"></i>
+            </a>
+          </div>
         </div>
         <div class="hero-bg"></div>
       </section>
 
+      <!-- Rest of your HTML remains the same -->
       <!-- About Section -->
       <section id="about" class="content-card">
-        <h2>
-          <!-- <i class="fas fa-sparkle"></i>   -->
-          Contact Info
-        </h2>
+        <h2>Contact Info</h2>
         <p class="animated-text">
-          <strong>Email: </strong>ashishbiradar.1911@gmail.com <br /><strong
-            >Phone: </strong
-          >9552032489 <br /><strong>Address: </strong>Alandi,wadgaon
-          road,pune-412105
+          <strong>Email: </strong>ashishbiradar.1911@gmail.com <br />
+          <strong>Phone: </strong>9552032489 <br />
+          <strong>Address: </strong>Alandi,wadgaon road,pune-412105
         </p>
       </section>
 
@@ -54,10 +62,10 @@
         <div class="timeline-item">
           <div class="timeline-marker"></div>
           <p>
-            <strong>Skill 1: </strong>Web development <br /><strong
-              >Skill 2: </strong
-            >C language <br /><strong>Skill 3: </strong>Python Language
-            <br /><strong>Skill 4: </strong>Linux Operating System
+            <strong>Skill 1: </strong>Web development <br />
+            <strong>Skill 2: </strong>C language <br />
+            <strong>Skill 3: </strong>Python Language <br />
+            <strong>Skill 4: </strong>Linux Operating System
           </p>
         </div>
       </section>
@@ -67,13 +75,61 @@
         <h2><i class="fas fa-magic"></i> Personal Information</h2>
         <div class="skill" data-percent="90">
           <span
-            ><strong>Date of Birth: </strong>19/11/2006 <br /><strong
-              >Gender: </strong
-            >Male <br /><strong>Language Known: </strong>Marathi,English,Hindi
-            <br /><strong>Educational Qualification: </strong>B.tech from Mit
-            Aoe
+            ><strong>Date of Birth: </strong>19/11/2006 <br />
+            <strong>Gender: </strong>Male <br />
+            <strong>Language Known: </strong>Marathi,English,Hindi <br />
+            <strong>Educational Qualification: </strong>B.tech from Mit Aoe
           </span>
           <div class="skill-bar"></div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="content-card">
+        <h2><i class="fas fa-code"></i> Projects</h2>
+        <div class="projects-container">
+          <div class="project-column">
+            <a href="https://harshholkar.pythonanywhere.com/" class="project-link" target="_blank" rel="noopener noreferrer">
+              <h3>Project 1</h3>
+              <p>Mit Aoe Health Care Website</p>
+            </a>
+          </div>
+          <div class="project-column">
+            <a href="#your-project2-link" class="project-link" target="_blank" rel="noopener noreferrer">
+              <h3>Project 2</h3>
+              <p>Tours and Travels management system using linux</p>
+            </a>
+          </div>
+          <div class="project-column">
+            <a href="#your-project3-link" class="project-link" target="_blank" rel="noopener noreferrer">
+              <h3>Project 3</h3>
+              <p>Dummy Website</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Achievements Section -->
+      <section id="achievements" class="content-card">
+        <h2><i class="fas fa-trophy"></i> Achievements</h2>
+        <div class="achievements-column">
+          <ul>
+            <li>
+              <a href="#your-kali-certificate-link" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                🎖️ Kali Linux Certificate
+              </a>
+            </li>
+            <li>
+              <a href="#your-unix-certificate-link" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                🏆 Unix Certificate
+              </a>
+            </li>
+            <li>
+              <a href="#your-kaggle-profile-link" class="certificate-link" target="_blank" rel="noopener noreferrer">
+                📜 Master league on Kaggle
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
 
@@ -81,14 +137,13 @@
       <section id="contact" class="content-card contact-panel">
         <h2><i class="fas fa-paper-plane"></i> Contact Me</h2>
         <div class="contact-methods">
-          <a href="#" class="contact-btn email">
+          <a href="mailto:ashishbiradar.1911@gmail.com" class="contact-btn email">
             <i class="fas fa-envelope"></i>
           </a>
           <a href="#" class="contact-btn phone">
             <i class="fas fa-phone"></i>
           </a>
         </div>
-        <!-- Contact Form -->
         <form class="contact-form">
           <div class="form-group">
             <input type="text" placeholder="Your Name" required />

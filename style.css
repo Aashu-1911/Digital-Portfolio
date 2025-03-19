@@ -3,7 +3,7 @@
     --primary: #4ECDC4;
     --secondary: #FF6584;
     --dark: #2A2D3E;
-    --light: #F9F9FF;
+    --light: #EAEAEA;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -16,13 +16,41 @@
 body {
     background: var(--light);
     font-family: 'Poppins', sans-serif;
-    background-image: url('./blue-photo-frame-template-with-minimalist-decorative-leaf-element-png.webp'); /* Add your image URL here */
-    background-size: auto; /* Cover the entire background */
-    background-position: left; /* Center the background image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-attachment: fixed; /* Fix the background image */
+    background-image: url('./blue-photo-frame-template-with-minimalist-decorative-leaf-element-png.webp');
+    background-size: auto;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
+/* Social Links Styles - Added Section */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.social-links a {
+    color: var(--light);
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.social-links a:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+.social-links .fa-linkedin:hover {
+    color: #0A66C2;
+}
+
+.social-links .fa-envelope:hover {
+    color: #EA4335;
+}
+
+/* Rest of your existing CSS remains the same */
 .floating-nav {
     position: absolute;
     top: 2rem;
@@ -80,17 +108,9 @@ body {
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 2rem;
-    background-image: url('your-hero-image-url.jpg'); /* Add your hero image URL here */
-    background-size: cover; /* Cover the entire hero section */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-}
-
-.pfp{
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-
-
 }
 
 .hero-card::before {
@@ -100,7 +120,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+    background: rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -111,7 +131,7 @@ body {
     transform: translate(-50%, -50%);
     z-index: 2;
     text-align: center;
-    color: white; /* Ensure text is white for better readability */
+    color: white;
 }
 
 .avatar-frame {
@@ -132,7 +152,7 @@ body {
 }
 
 .content-card {
-    background: white;
+    background: #A5BFCC;
     color:var(--dark);
     border-radius: 15px;
     padding: 2.5rem;
@@ -232,23 +252,95 @@ body {
     transform: translateY(-3px);
 }
 
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.project-column {
+    background: #F4EDD3;
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    transition: var(--transition);
+}
+
+.project-link {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition);
+}
+
+.project-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+}
+
+.project-column h3 {
+    color: var(--dark);
+    margin-bottom: 1rem;
+}
+
+.achievements-column {
+    background: #F4EDD3;
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 1.5rem;
+}
+
+.achievements-column ul {
+    list-style-type: none;
+}
+
+.certificate-link {
+    text-decoration: none;
+    color: var(--dark);
+    display: block;
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    transition: var(--transition);
+    border: 1px solid #000;
+}
+
+.certificate-link:hover {
+    text-decoration: none;
+    transform: translateX(10px);
+    background: linear-gradient(45deg, var(--primary), var(--secondary));
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-column {
+        margin-bottom: 1.5rem;
+    }
+    
+    .floating-nav {
+        display: none;
+    }
+    
+    .project-link {
+        padding: 1rem;
+    }
+}
+
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
 }
 
-/* .animated-text {
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-} */
-
-/* Animation for Contact Buttons */
 .contact-btn:hover {
     animation: float 1.5s infinite;
 }
 
-/* Animation for Form Inputs */
 .form-group input,
 .form-group textarea {
     animation: slideIn 0.5s ease-out;
@@ -262,11 +354,5 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
-    }
-}
-
-@media (max-width: 768px) {
-    .floating-nav {
-        display: none;
     }
 }
